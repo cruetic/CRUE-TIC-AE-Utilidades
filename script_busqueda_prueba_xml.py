@@ -16,7 +16,7 @@ def cuales_son(archivos, objeto, key, value):
 		    
 		    key_n = n.attributes["key"].value
 		    value_n = n.attributes["value"].value
-		    if key_n == "Nombre DNS":
+		    if key_n == mostrar:
 		    	nombre = value_n
 		    elif key_n == key:
 		    	if value_n == value:
@@ -37,10 +37,11 @@ def devolverArchivos(carpeta, objeto, key, value):
 
 
 objeto= "Device"
+mostrar= "Nombre DNS"
 key= "Tipo General"
 value= "Blade"
 
-
+print("\n")
 print("Las máquinas tipo Blade son:\n")
 devolverArchivos("C:/Users/Hp/AppData/Roaming/Archi4/model-repository/archimate/model", objeto, key, value)
 

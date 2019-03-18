@@ -16,7 +16,7 @@ def cuales_son(archivos, objeto, key, value):
 		    
 		    key_n = n.attributes["key"].value
 		    value_n = n.attributes["value"].value
-		    if key_n == "Nombre DNS":
+		    if key_n == mostrar:
 		    	nombre = value_n
 		    elif key_n == key:
 		    	if value_n == value:
@@ -36,6 +36,7 @@ def devolverArchivos(carpeta, objeto, key, value):
 			devolverArchivos(os.path.join(carpeta,archivo), objeto, key, value)
 
 
+mostrar="Nombre DNS"
 objeto= "Device"
 key= "Tipo General"
 value= "Blade"

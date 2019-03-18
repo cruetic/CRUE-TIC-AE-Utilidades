@@ -57,7 +57,7 @@ def cuales_son(archivos, objeto, key, value):
 		if a==1 and no==0:
 			nombre = linea
 			a=0
-		if linea == "      key=\"" +key + "\"\n" and no==0:
+		if linea == "      key=\"Nombre DNS\"\n" and no==0:
 			a=1
 		if a==2 and no==0:
 			if linea == "      value=\""+ value + "\"/>\n":
@@ -66,7 +66,7 @@ def cuales_son(archivos, objeto, key, value):
 				sys.stdout.write(nombre)
 				nombre = ""
 			a=0
-		if linea == "      key=\"Tipo General\"\n" and no==0:
+		if linea == "      key=\"" +key + "\"\n" and no==0:
 			a=2
 
 
@@ -90,7 +90,7 @@ def devolverArchivos(carpeta, objeto, key, value):
 
 
 objeto= "Device"
-key= "Nombre DNS"
+key= "Tipo General"
 value= "Blade"
 
 
@@ -108,3 +108,5 @@ devolverArchivos("C:/Users/Hp/AppData/Roaming/Archi4/model-repository/archimate/
 
 
 print("\n\n\n")
+a = "Fin"
+input(a)

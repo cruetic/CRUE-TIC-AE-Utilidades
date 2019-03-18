@@ -43,10 +43,9 @@ value= "Blade"
 
 
 print("Las máquinas tipo Blade son:\n")
+
+#Ruta Gabriel
 devolverArchivos("C:/Users/Hp/AppData/Roaming/Archi4/model-repository/archimate/model", objeto, key, value)
 
-print("\n\n\n")
-"""
-a = "Fin"
-input(a)
-"""
+#Ruta Pablo
+#devolverArchivos("C:/Users/Usuario/AppData/Roaming/Archi4/model-repository/archimate/model", objeto, key, value)

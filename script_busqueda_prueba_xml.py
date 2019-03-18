@@ -42,7 +42,7 @@ key= "Tipo General"
 value= "Blade"
 
 
-print("Las máquinas tipo Blade son:\n")
+print("Las máquinas tipo ",value," son:\n")
 
 #Ruta Gabriel
 devolverArchivos("C:/Users/Hp/AppData/Roaming/Archi4/model-repository/archimate/model", objeto, key, value)

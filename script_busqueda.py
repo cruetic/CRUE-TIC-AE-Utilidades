@@ -78,6 +78,7 @@ def devolverArchivos(carpeta, objeto, key, value):
 		#print(os.path.join(carpeta,archivo))
 		if os.path.isfile(os.path.join(carpeta,archivo)):
 			cuales_son(os.path.join(carpeta,archivo), objeto, key, value)
+			
 
 		if os.path.isdir(os.path.join(carpeta,archivo)):
 

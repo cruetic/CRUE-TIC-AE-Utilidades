@@ -36,17 +36,18 @@ def devolverArchivos(carpeta, objeto, key, value):
 			devolverArchivos(os.path.join(carpeta,archivo), objeto, key, value)
 
 
+mostrar="Nombre DNS"
 objeto= "Device"
 mostrar= "Nombre DNS"
 key= "Tipo General"
 value= "Blade"
 
-print("\n")
-print("Las máquinas tipo Blade son:\n")
+
+
+print("Las máquinas tipo ",value," son:\n")
+
+#Ruta Gabriel
 devolverArchivos("C:/Users/Hp/AppData/Roaming/Archi4/model-repository/archimate/model", objeto, key, value)
 
-print("\n\n\n")
-"""
-a = "Fin"
-input(a)
-"""
+#Ruta Pablo
+#devolverArchivos("C:/Users/Usuario/AppData/Roaming/Archi4/model-repository/archimate/model", objeto, key, value)

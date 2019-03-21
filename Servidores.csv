@@ -1,0 +1,24 @@
+SERVIDORES;;;;;;;
+Nombre DNS;SO;Tipo de Hardware;Tipo General;Servidor;Contendor
+;Ubuntu 14.04;;;;
+;Centos7;;;;
+openldap1pre;centos7;físico;;;
+;Ubuntu 14.04;;;Nginx;Tomcat7
+db02.stic.ull.es;Win 2008 Server Standar R2;Físico;Blade;;
+Openldap1;Centos7;Físico;;;
+login02;ubuntu 14.04;virtual;;;
+mdb02pre;ubuntu 14.04;virtual;;;
+mdb02;ubuntu 14.04;virtual;;;
+;Ubuntu 14.04;;;Nginx;Tomcat7
+login01pre;ubuntu 14.04;virtual;;;
+mdb01;ubuntu 14.04;virtual;;;
+login02pre;ubuntu 14.04;virtual;;;
+Openldap2;Centos7;Físico;;;
+;Centos7;;;;
+login01;ubuntu 14.04;virtual;;;
+nesspreso.whatelse.com.aus;Windows;Fisico;VMWARE;;
+;Ubuntu 14.04;;;;
+usuarios1.stic.ull.es;Ubuntu 12;Virtual;VMWARE;;
+mdb01pre;ubuntu 14.04;virtual;;;
+pruebadefault.STIC.ULL.ES;RedHat,CENTOS,Win Server;fisico o virtual;Blade;;
+TS02.STIC.ULL.ES;RedHat,CENTOS,Win Server;fisico o virtual;Servidor Stanalone, Blade, cabina de almacenamiento, otro;;

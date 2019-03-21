@@ -86,7 +86,7 @@ write.write("Cód. CRUE;Nombre del Servicio;Descripción del Servicio\n")
 
 
 
-
+print("\n\n\n")
 
 
 #Ruta Gabriel
@@ -96,6 +96,6 @@ devolverArchivos("C:/Users/Hp/AppData/Roaming/Archi4/model-repository/crue-tic-a
 #devolverArchivos("C:/Users/Usuario/AppData/Roaming/Archi4/model-repository/archimate/model", objeto, key, value)
 
 if write:
-	print("\n---------------------------Archivo Servicios_CRUETIC.csv generado.---------------------------\n")
+	print("\n---------------------------Archivo Servicios_CRUETIC.csv generado.---------------------------\n\n\n")
 
 write.close()

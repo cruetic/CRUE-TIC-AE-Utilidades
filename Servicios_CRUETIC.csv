@@ -80,30 +80,30 @@ CRUE_03_611;Gestión Calidad. Felicitaciones, quejas ysugerencias;Aplicaciones pa
 CRUE_03_61;Gestión Calidad. Herramienta para evaluación EFQM;Aplicaciones para la gestión de la evaluación y autoevaluación de la calidad según el modelo EFQM
 CRUE_03_53;Biblioteca Universitaria;Aplicaciones para la gestión de los procesos soportados por la Biblioteca universitaria.
 CRUE_03_54;Biblioteca Universitaria. Repositorio institucional;Aplicaciones para la gestión del repositorio digital institucional de la Universidad. universitaria. 
-CRUE_05_05;Intranet. Portal del empleado;Publicación de recursos y servicios dirigidos a los empleados de la universidad sobre un sitio web de acceso restringido a este colectivo.
-CRUE_05_11;Grabación y Difusión de eventos.;Grabación audiovisual de eventos, incluyendo la posibilidad de difusión a través de internet. Sistemas de grabación y difusión en streaming,  usando hardware específico.  El servicio de alojamiento de estos contenidos está recogido en los servicios de Contenidos Digitales (CRUE_05_07, 09 y 10)
-CRUE_05_021;Carpeta ciudadana;Según lo establecido en la Legislación vigente
 CRUE_05_012;Web. Alojamiento;Servidores web alojados fuera del servidor Web institucional
-CRUE_05_02;Sede electrónica;Publicación de información en la Sede electrónica según lo establecido en la Legislación vigente
-CRUE_05_09;Contenidos Digitales. Contenidos Docentes.;Soporte al almacenamiento y difusión de contenidos docentes en formato digital
 CRUE_05_01;Web institucional;Hospedaje de información académica, de investigación y gestión en el sitio web institucional de la Universidad
-CRUE_05_04;Intranet. Portal del investigador.;Publicación de recursos y servicios dirigidos a los investigadores sobre un sitio web de acceso restringido a este colectivo.
-CRUE_05_022;Tablón de anuncios;Según lo establecido en la Legislación vigente
-CRUE_05_023;Portal de transparencia;Según lo establecido en la Legislación vigente
-CRUE_05_06;Intranet. Portal del estudiante o Secretaría Virtual.;Publicación de recursos y servicios dirigidos a los estudiantes de la universidad sobre un sitio web de acceso restringido a este colectivo.
-CRUE_05_03;Intranet;Publicación de información académica, de investigación y servicios universitarios en un sitio web de acceso restringido a la comunidad universitaria.
+CRUE_05_011;Web. Espacio personal;Hospedaje de información académica, de investigación y gestión en espacios personales de los miembros de la comunidad
+CRUE_05_09;Contenidos Digitales. Contenidos Docentes.;Soporte al almacenamiento y difusión de contenidos docentes en formato digital
 CRUE_05_10;Contenidos Digitales. Contenidos Docentes de acceso abierto.;Soporte al almacenamiento y difusión de contenidos docentes de acceso abierto
 CRUE_05_07;Contenidos Digitales. Material audiovisual.;Soporte al almacenamiento y difusión de material audiovisual
-CRUE_05_011;Web. Espacio personal;Hospedaje de información académica, de investigación y gestión en espacios personales de los miembros de la comunidad
 CRUE_05_08;Contenidos Digitales. Material fotográfico.;Soporte al almacenamiento y difusión de material fotográfico
-CRUE_07_04;Consulta Tarificación Telefónica.;Soporte a la aplicación que facilita el acceso a la información de consumo telefónico personal.
-CRUE_07_021;Comunicaciones unificadas;Diseño, administración y gestión de las comunicaciones de voz, incluyendo de forma integrada voz, video y datos de modo unificado
-CRUE_07_01;Telefonía fija.;Diseño, administración y gestión de las comunicaciones de voz basadas en el uso de terminales fijos.
+CRUE_05_11;Grabación y Difusión de eventos.;Grabación audiovisual de eventos, incluyendo la posibilidad de difusión a través de internet. Sistemas de grabación y difusión en streaming,  usando hardware específico.  El servicio de alojamiento de estos contenidos está recogido en los servicios de Contenidos Digitales (CRUE_05_07, 09 y 10)
+CRUE_05_05;Intranet. Portal del empleado;Publicación de recursos y servicios dirigidos a los empleados de la universidad sobre un sitio web de acceso restringido a este colectivo.
+CRUE_05_04;Intranet. Portal del investigador.;Publicación de recursos y servicios dirigidos a los investigadores sobre un sitio web de acceso restringido a este colectivo.
+CRUE_05_06;Intranet. Portal del estudiante o Secretaría Virtual.;Publicación de recursos y servicios dirigidos a los estudiantes de la universidad sobre un sitio web de acceso restringido a este colectivo.
+CRUE_05_03;Intranet;Publicación de información académica, de investigación y servicios universitarios en un sitio web de acceso restringido a la comunidad universitaria.
+CRUE_05_021;Carpeta ciudadana;Según lo establecido en la Legislación vigente
+CRUE_05_02;Sede electrónica;Publicación de información en la Sede electrónica según lo establecido en la Legislación vigente
+CRUE_05_022;Tablón de anuncios;Según lo establecido en la Legislación vigente
+CRUE_05_023;Portal de transparencia;Según lo establecido en la Legislación vigente
 CRUE_07_07;Conexión Externa a Red de Comunicaciones.;Diseño, administración y gestión de las comunicaciones desde una red externa a la institucional utilizando mecanismos de cifrado
-CRUE_07_03;Fax.;Diseño, administración y gestión de las comunicaciones de intercambio de fax.
-CRUE_07_02;Telefonía Móvil.;Diseño, administración y gestión de las comunicaciones de voz basadas en el uso de terminales móviles.
 CRUE_07_05;Conexión a red Cableada.;Diseño, administración y gestión de las comunicaciones soportadas sobre la red de cableado estructurado de la universidad
 CRUE_07_06;Conexión a red Inalámbrica.;Diseño, administración y gestión de las comunicaciones soportadas sobre la red inalámbrica de la universidad
+CRUE_07_021;Comunicaciones unificadas;Diseño, administración y gestión de las comunicaciones de voz, incluyendo de forma integrada voz, video y datos de modo unificado
+CRUE_07_02;Telefonía Móvil.;Diseño, administración y gestión de las comunicaciones de voz basadas en el uso de terminales móviles.
+CRUE_07_01;Telefonía fija.;Diseño, administración y gestión de las comunicaciones de voz basadas en el uso de terminales fijos.
+CRUE_07_04;Consulta Tarificación Telefónica.;Soporte a la aplicación que facilita el acceso a la información de consumo telefónico personal.
+CRUE_07_03;Fax.;Diseño, administración y gestión de las comunicaciones de intercambio de fax.
 CRUE_01_06;Soporte a realización y correción de exámenes;Soporte a la automatización de la generación y/o correción de exámenes.
 CRUE_01_061;Registro de asistencia;Implantación, gestión y soporte de soluciones para el control de asistencia a clases del alumnado
 CRUE_01_062;Antiplagio;Implantación y gestión de plataforma antiplagio. Aunque el antiplagio también se usa para ayuda a la investigación se incluye en este grupo por considerarse de mayor impacto en la docencia
@@ -140,27 +140,29 @@ CRUE_00_16;Digitalización certificada;Sistemas de digitalización certificada de 
 CRUE_00_15;Sellado de tiempo;Sellos de tiempo emitidos por una TSA para garantizar el fechado electrónico de los documentos.
 CRUE_00_09;Sistema de almacenamiento en red;
 CRUE_00_06;Backup centralizado de servidores;Sistemas para la centralización de copias de seguridad de servidores
-CRUE_04_11;Videoconferencia. Web.;Diseño, administración y gestión de las comunicaciones audiovisuales basadas en sistemas de videoconferencia web
-CRUE_04_08;Plataformas de trabajo colaborativo;Diseño, administración y gestión de las comunicaciones basadas en espacios compartidos con capacidad de colaboración en documentos electrónicos: SharePoint, Grupos Office 365, Google Groups, agenda, calendarios, carpetas compartidas
-CRUE_04_10;Intercambio de ficheros. Ficheros gran volumen.;Diseño, administración y gestión de las comunicaciones basadas en el intercambio de ficheros de gran volumen
 CRUE_04_061;Red Social corporativa.;Plataforma que la universidad usa, implanta o desarrolla para la Red Social Corporativa
-CRUE_04_05;Correo electrónico. Listas de Distribución.;Diseño, administración y gestión de las comunicaciones basadas en listas de correo electrónico, en diferentes modalidades como moderada y no moderada
+CRUE_04_06;Comunicados por SMS y Redes Sociales.;Diseño, administración y gestión de las comunicaciones basadas en el uso de plataformas de envío de mensajes cortos (SMS y Redes Sociales)
+CRUE_04_11;Videoconferencia. Web.;Diseño, administración y gestión de las comunicaciones audiovisuales basadas en sistemas de videoconferencia web
 CRUE_04_13;Videoconferencia. Inmersión;Diseño, administración y gestión de las comunicaciones audiovisuales basadas en sistemas de basadas en el uso de salas especialmente equipadas para integrar presencia y contenidos.
+CRUE_04_12;Videoconferencia. Sala.;Diseño, administración y gestión de las comunicaciones audiovisuales basadas en sistemas de basadas en el uso de equipos de videoconferencia de sala y equipamiento MCU.
+CRUE_04_05;Correo electrónico. Listas de Distribución.;Diseño, administración y gestión de las comunicaciones basadas en listas de correo electrónico, en diferentes modalidades como moderada y no moderada
 CRUE_04_03;Correo electrónico. Preuniversitarios.;Diseño, administración y gestión de las comunicaciones basadas en correo electrónico, destinado a los estudiantes preuniversitarios del distrito correspondiente.
 CRUE_04_04;Correo electrónico. Egresados.;Diseño, administración y gestión de las comunicaciones basadas en correo electrónico, destinado a los estudiantes egresados.
-CRUE_04_06;Comunicados por SMS y Redes Sociales.;Diseño, administración y gestión de las comunicaciones basadas en el uso de plataformas de envío de mensajes cortos (SMS y Redes Sociales)
 CRUE_04_02;Correo electrónico. Estudiantes.;Diseño, administración y gestión de las comunicaciones basadas en correo electrónico, destinado a los estudiantes universitarios.
-CRUE_04_09;Intercambio de ficheros. FTP;Diseño, administración y gestión de las comunicaciones basadas en el intercambio de ficheros a través del protocolo de transferencia FTP
 CRUE_04_01;Correo electrónico. PDI y PAS.;Diseño, administración y gestión de las comunicaciones basadas en correo electrónico, destinado al PAS y PDI.
-CRUE_04_12;Videoconferencia. Sala.;Diseño, administración y gestión de las comunicaciones audiovisuales basadas en sistemas de basadas en el uso de equipos de videoconferencia de sala y equipamiento MCU.
-CRUE_08_01;Directorio.;
-;Gestión de credenciales.;Diseño, administración y gestión de la plataforma que almacena gestiona los datos y mecanismos de acceso a los servicios y aplicaciones de la Universidad
-CRUE_06_01;Servicio de provisión y renovación del puesto de trabajo.;Instalación y configuración del equipamiento informático (hardware y software) adecuado al puesto de trabajo. Entendiendo por puesto de trabajo tanto pc sobremesa, pc portátil, tablet o terminal móvil
+CRUE_04_10;Intercambio de ficheros. Ficheros gran volumen.;Diseño, administración y gestión de las comunicaciones basadas en el intercambio de ficheros de gran volumen
+CRUE_04_09;Intercambio de ficheros. FTP;Diseño, administración y gestión de las comunicaciones basadas en el intercambio de ficheros a través del protocolo de transferencia FTP
+CRUE_04_08;Plataformas de trabajo colaborativo;Diseño, administración y gestión de las comunicaciones basadas en espacios compartidos con capacidad de colaboración en documentos electrónicos: SharePoint, Grupos Office 365, Google Groups, agenda, calendarios, carpetas compartidas
+CRUE_08_01;Directorio.;Diseño, administración y gestión de la plataforma que almacena, organiza y publica información personal de los usuarios de la Universidad. Incluye el archivo fotográfico recogido con las diferentes aplicaciones.
+CRUE_08_02;Gestión de credenciales.;Diseño, administración y gestión de la plataforma que almacena gestiona los datos y mecanismos de acceso a los servicios y aplicaciones de la Universidad
+CRUE_08_05;Gestión de Certificados;Diseño, administración y gestión de la infraestructura de clave pública (PKI) de la universidad  para la emisión de certificados digitales. Incluye certificados de servidor, de aplicaciones, personales
+CRUE_08_03;Dispositivos físicos de autenticación;Facilita la obtención, gestión y utilización de dispositivos físicos para acceder y beneficiarse de diferentes servicios. Incluye TUI física TUI virtual en el móvil, llave de proximidad
 CRUE_06_031;Soporte a dispositivos personales (BYOD).;Soporte a la configuración para acceso a los dispositivos personales de forma segura
+CRUE_06_03;Mantenimiento de software corporativo.;Instalación, actualización y configuración de software corporativo en el puesto de trabajo.
+CRUE_06_02;Mantenimiento de equipamiento informático corporativo.;Resolución y atención a los problemas e incidencias del puesto de trabajo. Entendiendo por puesto de trabajo tanto pc sobremesa, pc portátil, tablet, terminal móvil 
+CRUE_06_01;Servicio de provisión y renovación del puesto de trabajo.;Instalación y configuración del equipamiento informático (hardware y software) adecuado al puesto de trabajo. Entendiendo por puesto de trabajo tanto pc sobremesa, pc portátil, tablet o terminal móvil
 CRUE_06_011;Cesión, préstamo y donación de equipamiento usado.;
 CRUE_06_07;Soporte a eventos especiales.;Soporte técnico en la realización de eventos (jornadas, congresos, presentaciones, formación on-line)
 CRUE_06_06;Asesoramiento para adquisición de equipamiento informático y software.;Asesoramiento técnico para el equipamiento y software más adecuado a las necesidades del usuario
-CRUE_06_03;Mantenimiento de software corporativo.;Instalación, actualización y configuración de software corporativo en el puesto de trabajo.
 CRUE_06_04;Impresión Corporativa.;Instalación y configuración de equipamiento para servicios de impresión. Equipamiento local, en red, o a través de una empresa externa
-CRUE_06_02;Mantenimiento de equipamiento informático corporativo.;Resolución y atención a los problemas e incidencias del puesto de trabajo. Entendiendo por puesto de trabajo tanto pc sobremesa, pc portátil, tablet, terminal móvil 
 CRUE_06_05;Seguridad Integral en el Puesto de Trabajo.;Configuración y administración centralizada de la seguridad en los equipos de usuario, incluyendo la administración de software de protección como antivirus.

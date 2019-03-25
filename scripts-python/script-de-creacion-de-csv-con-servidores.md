@@ -6,3 +6,5 @@ Con este Script **Python** crearemos un archivo .csv con la información de los 
 
 Por pantalla nos indicará aquellos servidores que carezcan de alguna propiedad. 
 
+`$ py script_generacion_csv_servidores.py`
+

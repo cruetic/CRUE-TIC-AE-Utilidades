@@ -6,3 +6,7 @@ Con este Script **Python** crearemos un archivo .csv extrayendo las propiedades 
 
 Por pantalla nos indicará aquellos objetos que carezcan de alguna propiedad. 
 
+`$ py script_generacion_csv_descipciones.py`
+
+
+

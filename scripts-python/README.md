@@ -12,7 +12,7 @@ Se trata de un lenguaje de programación multiparadigma, ya que soporta orientac
 
 Es administrado por la Python Software Foundation. Posee una licencia de código abierto, denominada Python Software Foundation License,2​ que es compatible con la Licencia pública general de GNU a partir de la versión 2.1.1, e incompatible en ciertas versiones anteriores.
 
-Para ejecutar los scripts debemos tener instalado en nuestra maquina el intérprete de python.
+Para ejecutar los scripts debemos tener instalado en nuestra maquina el intérprete de Python.
 
 [Descarga intérprete Python.](https://www.python.org/downloads/)
 

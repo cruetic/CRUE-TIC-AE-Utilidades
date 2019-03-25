@@ -6,3 +6,5 @@ Con este Script podemos realizar una búsqueda indicando tipo y nombre de propie
 
 Este programa nos devuelve por pantalla la propiedad que seleccionamos de los resultados y basa su búsqueda en librerías de tratamiento de archivos .xml.
 
+`$ py script_busqueda_mejorado_xml.py`
+

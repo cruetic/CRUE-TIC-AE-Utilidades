@@ -6,5 +6,7 @@ Este programa nos devuelve por pantalla los nombres de los resultados y basa su 
 
 Con este Script podemos realizar una búsqueda indicando tipo y nombre de propiedad en todos los objetos Archimate de nuestro repo.
 
+`$ py script_busqueda.py`
+
 
 

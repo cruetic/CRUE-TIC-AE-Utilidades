@@ -16,11 +16,11 @@ Por ejemplo, para obtener el listado de servidores:
 
 Un ejemplo de salida por pantalla seria:
 
-![Ejemplo warnings generaci&#xF3;n Devices](../.gitbook/assets/captura.PNG)
+![Warnings por pantalla de la ejecuci&#xF3;n.](../.gitbook/assets/imagen%20%281%29.png)
 
-Y nos crearía un Lista\_Devices.csv tal que así:
+Y nos crearía un Lista\_Device.csv tal que así:
 
-![Lista\_Device.csv generado](../.gitbook/assets/image.png)
+![Lista\_Device.csv](../.gitbook/assets/imagen.png)
 
 
 

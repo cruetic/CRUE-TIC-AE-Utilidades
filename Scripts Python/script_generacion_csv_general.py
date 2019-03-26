@@ -62,6 +62,8 @@ def cuales_son(archivos):
 						print(i,end=", ")
 					print("\nno cuenta con " + propiedades[cont2] + " definido.")
 					salto=1
+				else:
+					valor_propiedad[cont2] = ""
 				cont2 += 1
 			if salto ==1:
 				print("\n")	
@@ -121,12 +123,16 @@ def devolverArchivos_previo(carpeta):
 
 
 ##### main
+try:
+	parametro = sys.argv
+	print(parametro[1])
+	write = open ("./Lista_" + parametro[1] + ".csv", "w")
 
-parametro = sys.argv
-print(parametro[1])
-write = open ("./Lista_" + parametro[1] + ".csv", "w")
+	write.write(parametro[1] + ";;;;;;;\n")
 
-write.write(parametro[1] + ";;;;;;;\n")
+except:
+	print("\n---La rutina espera un parametro indicando el tipo de objeto. Ej. Device.---\n")
+	sys.exit()
 
 propiedades = []
 valor_propiedad = []

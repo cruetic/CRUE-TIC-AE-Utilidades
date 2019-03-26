@@ -62,11 +62,15 @@ def cuales_son(archivos):
 						print(i,end=", ")
 					print("\nno cuenta con " + propiedades[cont2] + " definido.")
 					salto=1
-				else:
-					valor_propiedad[cont2] = ""
+				
 				cont2 += 1
 			if salto ==1:
 				print("\n")	
+		cont=0		
+		for i in valor_propiedad:
+			valor_propiedad[cont] = ""
+			cont +=1
+
 	
 	read.close()
 

@@ -1,6 +1,6 @@
 # Desarrollos-Practicas-STIC
 
-\*\*\*\*[**Documentación GitBook**](https://alu0100885453.gitbook.io/desarrollos-pr-cticas-stic/)\*\*\*\*
+\*\*\*\*[**Documentación GitBook**](https://desarrollos-stic.gitbook.io/crue-tic-ae-utilidades/)\*\*\*\*
 
 En este repositorio se alojarán todos los desarrollos realizados durante el periodo de Prácticas Externas en el [Servicio de Tecnologías de la Información y la Comunicación](https://www.ull.es/servicios/stic/) de la [Universidad de la Laguna](https://www.ull.es/). 
 

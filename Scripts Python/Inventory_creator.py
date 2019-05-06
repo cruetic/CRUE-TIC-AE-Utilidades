@@ -64,13 +64,12 @@ def analizar_propiedades(archivo):
 	nivel = objeto = agrupacion = ""
 	
 	for n in itemlist:
-	    sin_key = 0
+	    
 	    try:
 	    	key_n = n.attributes["key"].value
 	    except:
 	    	key_n = ""
-	    	sin_key = 1
-
+	 
 	    try:
 	    	value_n = n.attributes["value"].value
 	    except:
@@ -181,12 +180,12 @@ def definir_propiedades(archivo, objeto, agrupacion):
 		    try:
 		    	key_n = n.attributes["key"].value
 		    except:
-		    	key_n = ""
+		    	key_n = "(vacio)"
 
 		    try:
 		    	value_n = n.attributes["value"].value
 		    except:
-		    	value_n = ""
+		    	value_n = "(vacio)"
 		    			   		    
 		    if not value_n in propiedades and key_n == agrupacion and value_n != "":
 		    	propiedades.append(value_n)
@@ -221,9 +220,14 @@ def obtener_objetos(archivo, objeto, agrupacion, grupo):
 
 			try:
 				key_n = n.attributes["key"].value
+				
+			except:
+				key_n = "(vacio)"
+
+			try:
 				value_n = n.attributes["value"].value
 			except:
-				key_n = ""
+				value_n = "(vacio)"
 
 			if key_n == agrupacion and value_n == grupo:
 				ids.append(objeto + "_" + identificador + ".xml#" + identificador)
@@ -232,6 +236,14 @@ def obtener_objetos(archivo, objeto, agrupacion, grupo):
 
 
 def devolverArchivos_obtenerobjetos(carpeta, objeto, agrupacion, grupo):
+
+	try:
+		index = carpeta.find('\\', 100)
+		ini = carpeta[0:index]
+		fin = carpeta[index:len(carpeta)]
+		carpeta=win32api.GetShortPathName(win32api.GetShortPathName(ini) + fin)
+	except:
+		carpeta = carpeta
 
 	for archivo in os.listdir(carpeta):
 
@@ -244,6 +256,14 @@ def devolverArchivos_obtenerobjetos(carpeta, objeto, agrupacion, grupo):
 
 
 def devolverArchivos_busquedapropiedades(carpeta, objeto, agrupacion):
+
+	try:
+		index = carpeta.find('\\', 100)
+		ini = carpeta[0:index]
+		fin = carpeta[index:len(carpeta)]
+		carpeta=win32api.GetShortPathName(win32api.GetShortPathName(ini) + fin)
+	except:
+		carpeta = carpeta
 
 	for archivo in os.listdir(carpeta):
 
@@ -258,6 +278,14 @@ def devolverArchivos_busquedapropiedades(carpeta, objeto, agrupacion):
 
 def devolverArchivos(carpeta):
 
+	try:
+		index = carpeta.find('\\', 100)
+		ini = carpeta[0:index]
+		fin = carpeta[index:len(carpeta)]
+		carpeta=win32api.GetShortPathName(win32api.GetShortPathName(ini) + fin)
+	except:
+		carpeta = carpeta
+
 	for archivo in os.listdir(carpeta):
 
 		if os.path.isfile(os.path.join(carpeta,archivo)):
@@ -268,7 +296,87 @@ def devolverArchivos(carpeta):
 			devolverArchivos(os.path.join(carpeta,archivo))
 
 
+def anadir(archivo):
 
+	# print(archivo)
+	read = open(archivo, encoding="utf8", errors='ignore')
+
+	nombre_archivo = archivo + "temporal"
+	# print(nombre_archivo)
+	# print("antes")
+	write = open(nombre_archivo, "w", encoding="utf-8")
+	# print("despues")
+
+
+	for linea in read:
+
+		if linea.find("\r") == -1:
+			linea.replace("\n", "\r\n")
+
+		write.write(linea)
+
+	write.close()
+	read.close()
+	
+	read = open(nombre_archivo, encoding="utf8", errors='ignore')
+	write = codecs.open(archivo, "w", "utf-8")
+
+	for linea in read:
+
+		write.write(linea)
+
+	write.close()
+	read.close()
+
+	#os.remove(nombre_archivo)
+
+
+
+def borrar(archivo):
+
+	if archivo.find("temporal") != -1:
+		os.remove(archivo)
+
+def anadirsaltos(carpeta):
+
+	
+
+	try:
+		index = carpeta.find('\\', 100)
+		ini = carpeta[0:index]
+		fin = carpeta[index:len(carpeta)]
+		carpeta=win32api.GetShortPathName(win32api.GetShortPathName(ini) + fin)
+	except:
+		carpeta = carpeta
+
+	if carpeta.find(".git") == -1:
+		for archivo in os.listdir(carpeta):
+			
+			if os.path.isfile(os.path.join(carpeta,archivo)):
+				anadir(os.path.join(carpeta,archivo))
+
+			if os.path.isdir(os.path.join(carpeta,archivo)):
+				anadirsaltos(os.path.join(carpeta,archivo))
+
+
+def borrar_archivos(carpeta):
+
+	try:
+		index = carpeta.find('\\', 100)
+		ini = carpeta[0:index]
+		fin = carpeta[index:len(carpeta)]
+		carpeta=win32api.GetShortPathName(win32api.GetShortPathName(ini) + fin)
+	except:
+		carpeta = carpeta
+
+	if carpeta.find(".git") == -1:
+		for archivo in os.listdir(carpeta):
+			
+			if os.path.isfile(os.path.join(carpeta,archivo)):
+				borrar(os.path.join(carpeta,archivo))
+								
+			if os.path.isdir(os.path.join(carpeta,archivo)):
+				borrar_archivos(os.path.join(carpeta,archivo))
 
 
 
@@ -302,7 +410,8 @@ if platform.system() == "Linux":
 	print("\n\n~~~~~~~~~~~~~~~~~~~~~~~~~Repositorio subido a Github.~~~~~~~~~~~~~~~~~~~~~~~~~\n")
 
 elif platform.system() == "Windows":
-	returned = os.system("cd ./../.. & git clone https://github.com/alu0100888041/Archimate.git Archimate")
+	import win32api
+	returned = os.system("cd ./../.. & git clone git@github.com:alu0100888041/Archimate.git Archimate")
 	if returned != 0:
 		print("\n\n~~~~~~~~~~~~~~~~~~~~~~~~~El repositorio ya estaba clonado previamente.~~~~~~~~~~~~~~~~~~~~~~~~~\n")
 		os.system("cd ../../Archimate & git pull")
@@ -311,6 +420,23 @@ elif platform.system() == "Windows":
 
 
 	print("\n\n~~~~~~~~~~~~~~~~~~~~~~~~~Repositorio actualizado~~~~~~~~~~~~~~~~~~~~~~~~~\n")
+
+
+	ruta_absoluta = os.getcwd()
+	ruta = "/../../Archimate/model"
+	ruta_final = ruta_absoluta + ruta
+
+
+	borrar_archivos(ruta_final)
+	anadirsaltos(ruta_final)
+	borrar_archivos(ruta_final)
+
+
+	ruta_absoluta = os.getcwd()
+	ruta = "/../../Archimate\\model\\technology\\1c47dca4-5ba1-4a55-a70e-310101b8e428\\04bc4f81-e649-4fff-b795-cf668ad2589c\\89348219-e068-40cd-bdaa-16676a6e4ba9\\17dccd3d-a2d5-4f6c-9f5e-d4a2c3332695\\folder.xmltemporal"
+	ruta_final = ruta_absoluta + ruta
+	
+
 	propiedades = []
 	ids = []
 	devolverArchivos("../../Archimate/model/diagrams")

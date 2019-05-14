@@ -1,5 +1,5 @@
 #! python3
-import sys, os, fileinput, codecs, datetime, platform
+import sys, os, fileinput, codecs, datetime, platform, win32api, math
 from xml.dom import minidom
 
 
@@ -94,7 +94,12 @@ def analizar_propiedades(archivo):
 	
 	ruta = "./../../Archimate/model/" + niveles(nivel)
 	propiedades.clear()
-	devolverArchivos_busquedapropiedades(ruta, objeto, agrupacion)
+	if agrupacion != "":
+		devolverArchivos_busquedapropiedades(ruta, objeto, agrupacion)
+	else:
+		propiedades.append("(vacio)")
+		agrupacion = "(vacio)"
+	
 	
 	read2 = codecs.open(archivo, "r", "utf-8")
 
@@ -103,9 +108,10 @@ def analizar_propiedades(archivo):
 	nombre_vista = ""
 	for n in itemlist2:
 
-		nombre_vista = n.attributes["name"].value + "_creada"
+		nombre_vista = n.attributes["name"].value
 		
-
+		print(archivo)
+		print(objeto)
 	
 	linea = read2.readline()
 	while linea.find("children") == -1 and linea.find("properties") == -1:				
@@ -115,24 +121,40 @@ def analizar_propiedades(archivo):
 		write.write(linea)
 		linea = read2.readline()
 	num_grupo = 1
+	altura_grupo = latitud_grupo = 0
 	for i in propiedades:
-		
+		ids.clear()
 		devolverArchivos_obtenerobjetos(ruta, objeto, agrupacion, i)
-		latitud_grupo = str((y_grupo * num_grupo) + (200 * (num_grupo-1)))
-		ancho_grupo = str((len(ids) * 120) + (x_objeto * (len(ids)+1)))
+		latitud_grupo = str(int(altura_grupo) + int(latitud_grupo) + 120)
+		altura_grupo = str(48 * (math.ceil((len(ids)/5))+1) + (55 * math.ceil((len(ids)/5))))
+		
+		
+		
+		if len(ids)<=5:
+			ancho_grupo = str((len(ids) * 120) + (x_objeto * (len(ids)+1)))
+		else:
+		 	ancho_grupo = str((5 * 120) + (x_objeto * (5+1)))
 		write.write("  <children\n      xsi:type=\"archimate:DiagramModelGroup\"\n      id=\"grupo_" + objeto + agrupacion + i + "\"\n      name=\"" + i + "\"\n      textAlignment=\"1\">")
-		write.write("\n    <bounds\n        x=\"200\"\n        y=\"" + latitud_grupo + "\"\n        width=\"" + ancho_grupo + "\"\n        height=\"180\"/>\n")
-		num_grupo += 1
+		write.write("\n    <bounds\n        x=\"200\"\n        y=\"" + latitud_grupo + "\"\n        width=\"" + ancho_grupo + "\"\n        height=\"" + altura_grupo + "\"/>\n")
+		num_grupo += math.ceil((len(ids)/5))
 		num_objetos = 1
+		altura = str(48)
+		#print(ids)
 		for j in ids:
+			
 			ancho = str((x_objeto * num_objetos) + (120 * (num_objetos-1)))
-			write.write("    <children\n        xsi:type=\"archimate:DiagramModelArchimateObject\"\n        id=\"id_" + objeto + j + "\">\n      <bounds\n          x=\"" + ancho + "\"\n          y=\"48\"\n          width=\"120\"\n          height=\"55\"/>\n")
+
+			write.write("    <children\n        xsi:type=\"archimate:DiagramModelArchimateObject\"\n        id=\"id_" + objeto + j + "\">\n      <bounds\n          x=\"" + ancho + "\"\n          y=\"" + altura + "\"\n          width=\"120\"\n          height=\"55\"/>\n")
 			write.write("      <archimateElement\n          xsi:type=\"archimate:" + objeto + "\"\n          href=\"" + j + "\"/>\n    </children>\n")
 
 			num_objetos += 1
+			if num_objetos == 6:
+				num_objetos = 1
+				altura = str(int(altura) + 103)
 
+		
 		write.write("  </children>\n")
-		ids.clear()
+		
 
 	
 	for n in itemlist:
@@ -147,20 +169,31 @@ def analizar_propiedades(archivo):
 	    try:
 	    	value_n = n.attributes["value"].value
 	    	value_n = value_n.replace("&", "&amp;")
-	    	if value_n == "Dinámica":
-	    		value_n = "Creada_a_partir_de_Dinámica"
 	    except:
 	    	value_n = ""
 	    write.write("      value=\"" + value_n + "\"/>\n")	
 	    
 	write.write("</archimate:ArchimateDiagramModel>")
 
-	print("\nNuevo archivo generado: " + nombre_archivo)
-	print("Con nombre de vista: " + nombre_vista + "\n")
+	print("\nNueva vista actualizada: " + nombre_vista + "\n")
+	
 
 	read.close()
 	read2.close()
 	write.close()
+
+
+	write = codecs.open (archivo, "w", "utf-8")
+	read = codecs.open(nombre_archivo, "r", "utf-8")
+
+	for linea in read:
+
+		write.write(linea)
+
+	write.close()
+	read.close()
+
+	os.remove(nombre_archivo)
 
 
 
@@ -215,6 +248,8 @@ def obtener_objetos(archivo, objeto, agrupacion, grupo):
 			
 
 		itemlist = doc.getElementsByTagName("properties")
+		if itemlist == [] and agrupacion == "(vacio)" and grupo == "(vacio)":
+			ids.append(objeto + "_" + identificador + ".xml#" + identificador)
 		
 		for n in itemlist:
 
@@ -231,6 +266,7 @@ def obtener_objetos(archivo, objeto, agrupacion, grupo):
 
 			if key_n == agrupacion and value_n == grupo:
 				ids.append(objeto + "_" + identificador + ".xml#" + identificador)
+				break
 				
 	read.close()
 
@@ -410,7 +446,6 @@ if platform.system() == "Linux":
 	print("\n\n~~~~~~~~~~~~~~~~~~~~~~~~~Repositorio subido a Github.~~~~~~~~~~~~~~~~~~~~~~~~~\n")
 
 elif platform.system() == "Windows":
-	import win32api
 	returned = os.system("cd ./../.. & git clone git@github.com:alu0100888041/Archimate.git Archimate")
 	if returned != 0:
 		print("\n\n~~~~~~~~~~~~~~~~~~~~~~~~~El repositorio ya estaba clonado previamente.~~~~~~~~~~~~~~~~~~~~~~~~~\n")
@@ -432,9 +467,7 @@ elif platform.system() == "Windows":
 	borrar_archivos(ruta_final)
 
 
-	ruta_absoluta = os.getcwd()
-	ruta = "/../../Archimate\\model\\technology\\1c47dca4-5ba1-4a55-a70e-310101b8e428\\04bc4f81-e649-4fff-b795-cf668ad2589c\\89348219-e068-40cd-bdaa-16676a6e4ba9\\17dccd3d-a2d5-4f6c-9f5e-d4a2c3332695\\folder.xmltemporal"
-	ruta_final = ruta_absoluta + ruta
+	
 	
 
 	propiedades = []
@@ -451,6 +484,3 @@ elif platform.system() == "Windows":
 	os.system("cd ../../Archimate & git push origin master")
 
 	print("\n\n~~~~~~~~~~~~~~~~~~~~~~~~~Repositorio subido a Github.~~~~~~~~~~~~~~~~~~~~~~~~~\n")
-
-
-

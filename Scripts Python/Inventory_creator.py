@@ -446,7 +446,7 @@ if platform.system() == "Linux":
 	print("\n\n~~~~~~~~~~~~~~~~~~~~~~~~~Repositorio subido a Github.~~~~~~~~~~~~~~~~~~~~~~~~~\n")
 
 elif platform.system() == "Windows":
-	returned = os.system("cd ./../.. & git clone git@github.com:alu0100888041/Archimate.git Archimate")
+	returned = os.system("cd ./../.. & git clone https://github.com/alu0100888041/Archimate.git Archimate")
 	if returned != 0:
 		print("\n\n~~~~~~~~~~~~~~~~~~~~~~~~~El repositorio ya estaba clonado previamente.~~~~~~~~~~~~~~~~~~~~~~~~~\n")
 		os.system("cd ../../Archimate & git pull")

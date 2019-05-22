@@ -1,5 +1,5 @@
 #! python3
-import sys, os, fileinput, codecs, datetime, platform, win32api, math
+import sys, os, fileinput, codecs, datetime, platform, math
 from xml.dom import minidom
 
 
@@ -446,6 +446,7 @@ if platform.system() == "Linux":
 	print("\n\n~~~~~~~~~~~~~~~~~~~~~~~~~Repositorio subido a Github.~~~~~~~~~~~~~~~~~~~~~~~~~\n")
 
 elif platform.system() == "Windows":
+	import win32api
 	returned = os.system("cd ./../.. & git clone https://github.com/alu0100888041/Archimate.git Archimate")
 	if returned != 0:
 		print("\n\n~~~~~~~~~~~~~~~~~~~~~~~~~El repositorio ya estaba clonado previamente.~~~~~~~~~~~~~~~~~~~~~~~~~\n")
